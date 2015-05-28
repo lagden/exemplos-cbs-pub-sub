@@ -17,7 +17,7 @@ define [
       else
         callOnce = true
         FB.init
-          appId: '1395650490714118'
+          appId: '884350331638447'
           status: true
           cookie: true
           xfbml: true
