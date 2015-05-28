@@ -45,9 +45,8 @@ define [
       fb.status()
         .then $.Broadcast('facebook.logado').publish
         .fail $.Broadcast('facebook.logado').publish
-
-      # Mostra os botões
-      $btns.show()
+    .fail () ->
+      $.Broadcast('notifica').publish 'Connect', 'Falhou'
       return
 
   return
