@@ -11,9 +11,10 @@ define [
 
   # Handler do clique dos botões
   callApiMethod = (m) ->
+    console.log m
     fb[m]()
-      .then $.Broadcast('facebook').publish
-      .fail $.Broadcast('facebook').publish
+      .then $.Broadcast('notifica').publish
+      .fail $.Broadcast('notifica').publish
     return
 
   # Seleciona todos os botões
@@ -31,6 +32,7 @@ define [
     b = a ^ 1
     $btns.filter('.bt[data-method="login"]')[m[a]]()
     $btns.filter('.bt[data-method="logout"]')[m[b]]()
+    $btns.filter('.bt[data-method="user"]')[m[b]]()
     return
 
   # Esconde os botões
@@ -39,7 +41,7 @@ define [
   # Verifica o Facebook e o Status
   fb.connect()
     .then (t, m) ->
-      $.Broadcast('facebook').publish t, m
+      $.Broadcast('notifica').publish t, m
       fb.status()
         .then $.Broadcast('facebook.logado').publish
         .fail $.Broadcast('facebook.logado').publish

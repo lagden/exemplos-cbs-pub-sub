@@ -13,6 +13,6 @@ define [
     growl.notifica t, m
     return
 
-  $.Broadcast('facebook').subscribe notifica
+  $.Broadcast('notifica').subscribe notifica
 
   return

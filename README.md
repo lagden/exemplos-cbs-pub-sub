@@ -3,7 +3,7 @@ Pub/Sub $.Callbacks
 
 > Exemplo de Pub/Sub utilizando apenas $.Callbacks
 
-**Atenção:** O código está em Coffescript
+**Atenção:** O código está em Coffescript (ver a pasta coffee)
 
 ## Install
 
